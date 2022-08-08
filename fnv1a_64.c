@@ -16,13 +16,11 @@ uint64_t fnv1a(char* key,int stringlen) {
     return hash;
 }
 
-//ac-argument count (no. of parameters)
-//av-argument value (parameters)
 int main (int ac, char **av) {
-    //manual output
+
     if(ac!=2) {
     int n=0;
-    char *inputstr = (char*)calloc(n,sizeof(char)); //dynamically allocate input
+    char *inputstr = (char*)calloc(n,sizeof(char)); 
 
     //input
     printf("Enter a string to be hashed: ");
@@ -34,7 +32,7 @@ int main (int ac, char **av) {
     return 0;
     }
 
-    //cmd output usage: ./filename.exe stringtobehashed
+    //./filename.exe stringtobehashed
     printf("FNV1A_64BIT_HASH: %llx",fnv1a(av[1],strlen(av[1])));
     return 0;
 }
